@@ -63,3 +63,14 @@ button:hover {
   background-color: gray;
   color: white;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  margin: 0.5em 0;
+}
