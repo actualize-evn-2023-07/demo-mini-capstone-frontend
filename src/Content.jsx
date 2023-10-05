@@ -1,7 +1,7 @@
 export function Content() {
   return (
-    <div>
+    <main>
       <h1>Welcome to React!</h1>
-    </div>
+    </main>
   );
 }
