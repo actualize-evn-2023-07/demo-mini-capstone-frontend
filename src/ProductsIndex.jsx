@@ -9,7 +9,7 @@ export function ProductsIndex(props) {
             <img src={product.images[0].url} alt="" />
             <h2>{product.name}</h2>
             <p>Price: {product.price}</p>
-            <button>Show more</button>
+            <a href={`/products/${product.id}`}>More info</a>
           </div>
         ))}
       </div>
