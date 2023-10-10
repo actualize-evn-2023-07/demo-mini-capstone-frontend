@@ -10,7 +10,7 @@ export function Content() {
   const [products, setProducts] = useState([]);
 
   const handleIndexProducts = () => {
-    axios.get("http://localhost:3000/products.json").then((response) => {
+    axios.get("/products.json").then((response) => {
       console.log(response.data);
       setProducts(response.data);
     });
