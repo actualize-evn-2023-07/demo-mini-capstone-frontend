@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [flashMessage, setFlashMessage] = useState("");
+  const [flashMessage, setFlashMessage] = useState(null);
 
   useEffect(() => {
     if (localStorage.flashMessage) {
@@ -18,7 +18,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <div onClick={() => setFlashMessage(null)}>{flashMessage}</div>
+        {flashMessage ? (
+          <div className="flash" onClick={() => setFlashMessage(null)}>
+            {flashMessage}
+          </div>
+        ) : null}
         <Content />
         <Footer />
       </BrowserRouter>
